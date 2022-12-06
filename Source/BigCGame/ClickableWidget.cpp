@@ -5,9 +5,6 @@
 
 UClickableWidget::UClickableWidget()
 {
-	FScriptDelegate Delegate;
-	Delegate.BindUFunction(this, "Interact");
-	Cell->OnPressed.Add(Delegate);
 }
 
 EInteractionType UClickableWidget::Interact()
