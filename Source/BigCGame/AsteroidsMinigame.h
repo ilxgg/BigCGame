@@ -13,6 +13,8 @@ UCLASS()
 class BIGCGAME_API UAsteroidsMinigame : public UMinigameBase
 {
 	GENERATED_BODY()
+
+	UAsteroidsMinigame();
 	
 protected:
 
@@ -28,6 +30,8 @@ private:
 
 
 protected:
+
+	void Construct();
 
 	UFUNCTION(BlueprintCallable)
 	virtual void startGame() override;

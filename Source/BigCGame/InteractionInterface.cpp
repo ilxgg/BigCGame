@@ -5,7 +5,8 @@
 
 // Add default functionality here for any IInteractionInterface functions that are not pure virtual.
 
-void IInteractionInterface::Interact()
+EInteractionType IInteractionInterface::Interact()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Default Interface Function, Class hasnt overridden function"));
+	return EInteractionType::null;
 }

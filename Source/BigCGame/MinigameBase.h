@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "InteractionINterface.h"
+#include "InteractionInterface.h"
 #include "MinigameBase.generated.h"
 
 /**
@@ -17,7 +17,8 @@ class BIGCGAME_API UMinigameBase : public UUserWidget, public IInteractionInterf
 	
 public:
 
-	virtual void Interact() override;
+	UFUNCTION(BlueprintCallable)
+	virtual EInteractionType Interact() override;
 
 protected:
 	virtual void startGame();

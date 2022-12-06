@@ -3,9 +3,10 @@
 
 #include "MinigameBase.h"
 
-void UMinigameBase::Interact()
+EInteractionType UMinigameBase::Interact()
 {
 	startGame();
+	return EInteractionType::minigame;
 }
 
 void UMinigameBase::startGame()

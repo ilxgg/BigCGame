@@ -6,6 +6,13 @@
 #include "UObject/Interface.h"
 #include "InteractionInterface.generated.h"
 
+UENUM()
+enum EInteractionType
+{
+	null, //default return type means nothign when pressed
+	minigame, //returns when object interacted with is a minigame
+	objective //returns when object interacted with is an objective within the minigame
+};
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
 class UInteractionInterface : public UInterface
@@ -23,5 +30,5 @@ class BIGCGAME_API IInteractionInterface
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 
-	virtual void Interact();
+	virtual EInteractionType Interact();
 };
